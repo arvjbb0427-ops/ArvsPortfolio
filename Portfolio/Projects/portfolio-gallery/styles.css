@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: #0a0a0a;
+    color: #fff;
+    min-height: 100vh;
+}
+
+.header {
+    text-align: center;
+    padding: 80px 20px 60px;
+}
+
+.header h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.header p {
+    font-size: 1.1rem;
+    color: #999;
+}
+
+.gallery-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.gallery-item {
+    flex: 1 1 300px;
+    max-width: 400px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+.gallery-image {
+    width: 100%;
+    padding-top: 75%;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.gallery-item:hover .gallery-image {
+    transform: scale(1.1);
+}
+
+.gallery-info {
+    padding: 25px;
+    background: #1a1a1a;
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover .gallery-info {
+    background: #2a2a2a;
+}
+
+.gallery-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.gallery-info p {
+    color: #999;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: #666;
+    border-top: 1px solid #222;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header {
+        padding: 50px 20px 40px;
+    }
+    
+    .gallery-container {
+        gap: 20px;
+        padding: 30px 20px 50px;
+    }
+    
+    .gallery-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}

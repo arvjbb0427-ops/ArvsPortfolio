@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+  color: #111;
+  background: #fff;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(11, 11, 11, 0.85);
+  backdrop-filter: blur(6px);
+  z-index: 100;
+}
+
+.nav-inner {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.nav-links a:hover {
+  color: #fff;
+}
+
+/* SECTION LABEL */
+.section-label {
+  display: block;
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  padding-top: 6rem;
+  background: #0b0b0b;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.hero h1,
+.hero .role,
+.hero .tagline {
+  opacity: 0;
+  animation: fadeUp 0.9s ease forwards;
+}
+
+.hero .role {
+  animation-delay: 0.15s;
+}
+
+.hero .tagline {
+  animation-delay: 0.3s;
+  max-width: 500px;
+  color: #ccc;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* SECTIONS */
+section {
+  padding: 6rem 0;
+}
+
+/* ABOUT */
+.about p {
+  max-width: 700px;
+  margin-top: 1.5rem;
+  color: #444;
+}
+
+/* PROJECTS */
+.projects-grid {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  border: 1px solid #e5e5e5;
+  padding: 2rem;
+  background: #fff;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 30px rgba(0,0,0,0.12);
+}
+
+.project-number {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.project-card h3 {
+  margin-top: 0.5rem;
+}
+
+.project-card p {
+  margin: 1rem 0;
+  color: #555;
+}
+
+.tags {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tags li {
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  background: #f0f0f0;
+}
+
+/* CONTACT */
+.contact {
+  background: #0b0b0b;
+  color: #fff;
+}
+
+.contact p {
+  max-width: 600px;
+  margin: 1.5rem 0;
+  color: #ccc;
+}
+
+.contact-links {
+  list-style: none;
+}
+
+.contact-links li {
+  margin-bottom: 1rem;
+}
+
+.contact-links a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid #444;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.85rem;
+  color: #777;
+}
