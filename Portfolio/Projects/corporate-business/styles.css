@@ -309,20 +309,28 @@ body {
     .header__container {
         flex-direction: column;
         align-items: center;
-        gap: calc(var(--spacing-unit) * 2);
+        gap: 1rem;
+    }
+
+    .header__logo {
+        margin-bottom: 0.5rem;
+        text-align: center;
+        width: 100%;
     }
 
     .header__nav {
-        flex-wrap: wrap;
+        width: 100%;
+        display: flex;
         justify-content: center;
-        gap: calc(var(--spacing-unit) * 2);
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .header__link {
+        font-size: 0.95rem;
     }
 
     .header__link--cta {
-        padding: calc(var(--spacing-unit) * 1.25) calc(var(--spacing-unit) * 2.5);
-    }
-
-    .hero {
-        padding: calc(var(--spacing-unit) * 8) calc(var(--spacing-unit) * 2);
+        padding: 0.6rem 1.2rem;
     }
 }
